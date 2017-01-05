@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import _ from 'lodash';
 import './stylesheets/index.css'
 
 import SearchBar from './components/SearchBar';
@@ -25,11 +26,12 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
+    const movieSearch = _.debounce((term) => { this.movieSearch(term) }, 500);
+
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
-        <SearchBar />
+        <SearchBar onSearchTermChange={movieSearch} />
       </div>
     )
   }
