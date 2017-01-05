@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import _ from 'lodash';
+const API_URL = 'http://www.omdbapi.com/?s='
 import './stylesheets/index.css'
 
 import SearchBar from './components/SearchBar';
-const API_URL = 'http://www.omdbapi.com/?s='
+import List from './components/List';
 
 class App extends Component {
   constructor() {
@@ -27,11 +28,12 @@ class App extends Component {
 
   render() {
     const movieSearch = _.debounce((term) => { this.movieSearch(term) }, 500);
-
+    console.log(this.state.movies);
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
         <SearchBar onSearchTermChange={movieSearch} />
+        <List movies={this.state.movies}/>
       </div>
     )
   }
