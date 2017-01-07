@@ -6,7 +6,7 @@ const API_URL = 'http://www.omdbapi.com/?s='
 import './stylesheets/index.css'
 
 import SearchBar from './components/SearchBar';
-import MovieList from './components/List';
+import MovieList from './components/MovieList';
 
 class App extends Component {
   constructor() {
