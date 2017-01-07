@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieCard from './MovieCard';
 
-const List = (props) => {
+const MovieList = (props) => {
   return (
     <div>
       {props.movies.map(movie => (
@@ -15,4 +15,4 @@ const List = (props) => {
   )
 }
 
-export default List;
+export default MovieList;

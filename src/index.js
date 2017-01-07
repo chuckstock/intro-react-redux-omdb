@@ -6,7 +6,7 @@ const API_URL = 'http://www.omdbapi.com/?s='
 import './stylesheets/index.css'
 
 import SearchBar from './components/SearchBar';
-import List from './components/List';
+import MovieList from './components/List';
 
 class App extends Component {
   constructor() {
@@ -33,7 +33,7 @@ class App extends Component {
       <div className="container">
         <h1>OMDB Movie Search</h1>
         <SearchBar onSearchTermChange={movieSearch} />
-        <List movies={this.state.movies}/>
+        <MovieList movies={this.state.movies}/>
       </div>
     )
   }
