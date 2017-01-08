@@ -11,16 +11,20 @@ theme: css/theme/solarized.css
 
 1. Who Am I
 1. Why React
-1. What Are We Doing Today
+1. Today's App
 1. Create React App (Facebook Generator Tool)
 1. Create Our First React Component
-1. Process for Creating Component
+1. Functional vs. Class Component
+1. A Class Component
+1. Lets Look at Some Code
 1. Homework
 
 ---
 
 ## Who am I?
-charlieblackstock@gmail.com
+
+charlieblackstock@gmail.com <br>
+[Github](https://github.com/blackstc)
 
 ----
 
@@ -101,7 +105,7 @@ Business School @ CU >>> Masteres @ USC >>> Public Accounting for 2 years >>> gS
 
 ---
 
-## Create a React Component
+## Create Our First React Component
 
 ```javascript
 import React from 'react';
@@ -160,3 +164,11 @@ class SearchBar extends Component {
 Note: constructor function is a part of all JS classes.  It is the first function called for each instance of the class.  constructor is reserved for doing some setup inside of our class (like initializing variables, initializing state, etc...).  Super calls the parent method on a parent class.
 
 ---
+
+## Lets Look at Some Code
+
+---
+
+## Homework
+* Add a node backend to the react app
+* Add a new API endpoint for our app to fetch movie data

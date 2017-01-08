@@ -15,7 +15,8 @@ class SearchBar extends Component {
             value={this.state.term}
             className="form-control"
             placeholder="Search Movie Title..."
-            onChange={event => this.setState({ term: event.target.value })} />
+            onChange={event => this.setState({ term: event.target.value })}
+            />
           <span className="input-group-btn">
             <button
               className="btn btn-success"
