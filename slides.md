@@ -20,27 +20,126 @@ theme: css/theme/solarized.css
 ---
 
 ## Who am I?
+charlieblackstock@gmail.com
 
-My name is Charlie Blackstock.  I work at a small tech-consultancy called Acumen Digital over in the Golden Triangle Galvanize space.  I started my coding career about 2.5 years ago with my brother teaching me Ruby after work and on weekends.  I feel in love with coding and quit my job in accounting and went to G-School.  A few months into G-School when we started learning front-end frameworks I decided to take some side classes from udemy.com and feel in love with React and Redux, and have been creating React apps ever since.  I recently, got Redux implemented into one our clients App's which is used by millions of people.
+----
+
+### Charlie Blackstock
+
+![](./public/kylo-ren.jpg)
+
+----
+
+### Work
+
+![](./public/acumen-logo.png)
+
+----
+
+### Background
+
+Business School @ CU >>> Masteres @ USC >>> Public Accounting for 2 years >>> gSchool >>> Acumen Digial
+
+----
+
+### Coding Background
+
+* Coding for 2.5 years
+  * Started learning Ruby with my brother
+* Created 40+ React & Redux applications
+  * 1 AngularJS & Redux App used by 2+ million users a month
+* Taught multiple workshops gSchool students and Galvanize members
+* Several workshops for work clients
 
 ---
 
 ## Why React
 
 * Light-weight front-end framework
-  * React feels like javascript vs. AngularJS feels like its own language
+  * Writing JavaScript
 * Component-Based Architecture
 * Declarative
   * Declarative views make your code more predictable and easier to debug.
 * Error Handling
-  * Something I don't think is mentioned nearly enough, but the error handling by React is light-years ahead of AngularJS
+  * Incredibly user friendly warning/error messaging
 
 ---
 
-```javascript
-import React, { Component } from 'react';
-import '../stylesheets/SearchBar.css'
+## Today's App
 
+** NEED LINK **
+
+---
+
+## Create-React-App
+* Facebook's react generator tool
+  * [Github Url](https://github.com/facebookincubator/create-react-app)
+* Great tool for getting a react app started quickly
+* Javascript Fatigue
+* Webpack & Babel
+
+----
+
+### Webpack
+
+* Webpack is a module bundler
+* Webpack takes modules with dependencies and generates static assets representing those modules
+* Goals of Webpack
+  * Split the dependency tree into chunks loaded on demand
+  * Keep initial loading time low
+  * Every static asset should be able to be a module
+  * Ability to integrate 3rd-party libraries as modules
+  * Ability to customize nearly every part of the module bundler
+  * Suited for big projects
+
+----
+
+### Babel
+
+  * Babel is JavaScript compiler
+  * Gives the ability to use next gen JavaScript functionality, without the worry if it not working in older browsers
+
+---
+
+## Create a React Component
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Create a new Component - this component should produce some HTML
+const Component = () => {
+  return <div>Im a React Component</div>; // React.createElement()
+}
+
+// Take Components rendered HTML and show on DOM
+ReactDOM.render(<Component />, document.getElementById('root'));
+```
+
+---
+
+## Functional vs. Class Component
+* A Functional Component (or a stateless component)
+  * Literally a function that takes some info in an some JSX goes out
+* A Class Component (or stateful component)
+  * Used whenever you need a component to have some internal record keeping
+  * Some ability to be aware of itself and what has happened since it was rendered
+  * Ex. a component with an `<input />` would typically need to keep track of what the user has entered into the `<input />` element
+
+---
+
+##  What is State?
+
+* State is a plain JavaScript object that is used to **record** and **react** to user events
+* Each component has its own state object
+* Whenever a component state is changed the component re-renders and causes its children to re-render
+
+---
+
+## A Class Component
+
+```javascript
+// assume the necessary import statements are listed above
 class SearchBar extends Component {
     constructor(props) {
       super(props);
@@ -50,21 +149,14 @@ class SearchBar extends Component {
 
     render() {
       return (
-        <div className="search-bar form-group">
-          <label>Enter Movie Title</label>
-          <input
-            value={this.state.term}
-            className="form-control"
-            onChange={event => this.onInputChange(event.target.value)} />
-        </div>
+        <input
+          value={this.state.term}
+          onChange={event => this.setState({term: event.target.value})}
+          />
       );
     }
-
-    onInputChange(term) {
-      this.setState({term});
-      this.props.onSearchTermChange(term);
-    }
 }
-
-export default SearchBar;
 ```
+Note: constructor function is a part of all JS classes.  It is the first function called for each instance of the class.  constructor is reserved for doing some setup inside of our class (like initializing variables, initializing state, etc...).  Super calls the parent method on a parent class.
+
+---

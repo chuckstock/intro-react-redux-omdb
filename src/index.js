@@ -27,13 +27,11 @@ class App extends Component {
   }
 
   render() {
-    const movieSearch = _.debounce((term) => { this.movieSearch(term) }, 500);
-    console.log(this.state.movies);
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
         <SearchBar onSearchTermChange={movieSearch} />
-        <MovieList movies={this.state.movies}/>
+        <MovieList movies={this.state.movies} />
       </div>
     )
   }
