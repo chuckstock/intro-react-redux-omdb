@@ -26,13 +26,13 @@ charlieblackstock@gmail.com
 
 ### Charlie Blackstock
 
-![](./public/kylo-ren.jpg)
+![](./kylo-ren.jpg)
 
 ----
 
 ### Work
 
-![](./public/acumen-logo.png)
+![](./acumen-logo.png)
 
 ----
 

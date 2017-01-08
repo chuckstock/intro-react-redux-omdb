@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import _ from 'lodash';
 const API_URL = 'http://www.omdbapi.com/?s='
 import './stylesheets/index.css'
 
@@ -16,10 +15,10 @@ class App extends Component {
       movies: []
     }
 
-    this.movieSearch('cool')
+    this.searchMovie('cool');
   }
 
-  movieSearch(term) {
+  searchMovie(term) {
     axios.get(`${API_URL}${term}`)
       .then(res => {
         this.setState({ movies: res.data.Search });
@@ -30,7 +29,7 @@ class App extends Component {
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
-        <SearchBar onSearchTermChange={movieSearch} />
+        <SearchBar searchMovie={this.searchMovie.bind(this)} />
         <MovieList movies={this.state.movies} />
       </div>
     )
