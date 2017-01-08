@@ -42,7 +42,7 @@ charlieblackstock@gmail.com <br>
 
 ### Background
 
-Business School @ CU >>> Masteres @ USC >>> Public Accounting for 2 years >>> gSchool >>> Acumen Digial
+Business School @ CU >>> Masters @ USC >>> Public Accounting for 2 years >>> gSchool >>> Acumen Digital
 
 ----
 
@@ -101,7 +101,7 @@ Business School @ CU >>> Masteres @ USC >>> Public Accounting for 2 years >>> gS
 ### Babel
 
   * Babel is JavaScript compiler
-  * Gives the ability to use next gen JavaScript functionality, without the worry if it not working in older browsers
+  * Gives the ability to use next gen JavaScript functionality, without worrying about your code working on older browsers
 
 ---
 
