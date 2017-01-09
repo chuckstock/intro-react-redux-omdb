@@ -23,6 +23,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
