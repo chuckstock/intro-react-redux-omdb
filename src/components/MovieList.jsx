@@ -1,17 +1,12 @@
 import React from 'react';
-import MovieCard from './MovieCard';
 
 const MovieList = (props) => {
   return (
-    <div>
-      {props.movies.map(movie => (
-        <MovieCard
-          key={movie.imdbID}
-          title={movie.Title}
-          posterUrl={movie.Poster}
-          />
-      ))}
-    </div>
+    <ul>
+      {props.movies.map(movie => {
+        return <li>{movie.Title}</li>
+      })}
+    </ul>
   )
 }
 
