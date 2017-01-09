@@ -9,7 +9,7 @@ const MovieCard = (props) => {
           <h3 className="panel-title">{props.title}</h3>
         </div>
         <div className="panel-body">
-          <img src={props.posterUrl} />
+          <img src={props.posterUrl} alt="Presentation" />
         </div>
       </div>
     </div>
