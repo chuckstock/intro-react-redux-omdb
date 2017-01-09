@@ -25,13 +25,13 @@ ReactDOM.render(<Component />, document.getElementById('root'));
 
 --- -->
 
-<!-- ##  What is State?
+##  What is State?
 
 * State is a plain JavaScript object that is used to **record** and **react** to user events
 * Each component has its own state object
 * Whenever a component state is changed the component re-renders and causes its children to re-render
 
---- -->
+---
 
 ## A Class Component
 
