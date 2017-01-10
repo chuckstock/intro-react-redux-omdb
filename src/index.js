@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   searchMovie(term) {
+    console.log(this);
     axios.get(`${API_URL}${term}`)
       .then(res => {
         this.setState({ movies: res.data.Search });
@@ -29,7 +30,7 @@ class App extends Component {
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
-        <SearchBar searchMovie={this.searchMovie.bind(this)} />
+        <SearchBar searchMovie={this.searchMovie} />
         <MovieList movies={this.state.movies} />
       </div>
     )
