@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 const API_URL = 'http://www.omdbapi.com/?s='
 
-import MovieList from './components/MovieList';
-
 class App extends Component {
   constructor() {
     super()
