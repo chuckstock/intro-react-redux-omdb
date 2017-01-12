@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
-        <SearchBar searchMovie={this.searchMovie.bind(this)} />
+        <SearchBar />
         <MovieList movies={this.state.movies} />
       </div>
     )
