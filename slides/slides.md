@@ -1,6 +1,6 @@
 ---
 title: Intro To React & Redux
-theme: css/theme/moon.css
+theme: css/theme/solarized.css
 ---
 
 # Intro To React and Redux
