@@ -1,6 +1,7 @@
 import React from 'react';
 
 const MovieList = (props) => {
+  console.log(props)
   return (
     <ul>
       {props.movies.map(movie => {
