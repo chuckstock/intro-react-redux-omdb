@@ -11,6 +11,7 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
+  "homepage": "https://blackstc.github.io/intro-react-redux-omdb/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
