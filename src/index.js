@@ -28,7 +28,9 @@ class App extends Component {
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
-        <MovieCard title="Snatch" posterUrl="https://images-na.ssl-images-amazon.com/images/I/41JGXWM4SPL.jpg" />
+        <MovieCard
+          title="Snatch" posterUrl="https://images-na.ssl-images-amazon.com/images/I/41JGXWM4SPL.jpg"
+          />
         <MovieList movies={this.state.movies} />
       </div>
     )
