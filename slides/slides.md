@@ -1,6 +1,6 @@
 ---
 title: Intro To React & Redux
-theme: css/theme/solarized.css
+theme: css/theme/moon.css
 ---
 
 # Intro To React and Redux
@@ -59,6 +59,8 @@ Business School @ CU >>> Masters @ USC >>> Public Accounting for 2 years >>> gSc
 * Light-weight front-end framework
   * Writing JavaScript
 * Component-Based Architecture
+  * Community Driven Components
+* Community
 * Declarative
   * Declarative views make your code more predictable and easier to debug.
 * Error Handling
@@ -68,7 +70,7 @@ Business School @ CU >>> Masters @ USC >>> Public Accounting for 2 years >>> gSc
 
 ## Today's App
 
-** NEED LINK **
+[OMDB App](https://blackstc.github.io/intro-react-redux-omdb/)
 
 ---
 
