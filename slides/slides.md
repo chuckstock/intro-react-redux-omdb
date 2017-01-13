@@ -12,6 +12,7 @@ theme: css/theme/solarized.css
 1. Who Am I
 1. Why React
 1. Today's App
+  1. Stretch Goals
 1. Create React App (Facebook Generator Tool)
 1. Lets Look at Some Code
 1. Homework
