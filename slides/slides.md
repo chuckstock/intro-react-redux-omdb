@@ -110,5 +110,7 @@ Business School @ CU >>> Masters @ USC >>> Public Accounting for 2 years >>> gSc
 ---
 
 ## Homework
-* Add a node backend to the react app
-* Add a new API endpoint for our app to fetch movie data
+* Add a node backend to in a separate Repo
+* Add a API endpoint that we will use to search movies that returns data from the OMDB API
+* Update react to user our new Node API endpoint
+![](./api_options.png)
