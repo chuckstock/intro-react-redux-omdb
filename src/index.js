@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
-        <SearchBar searchMovie={this.searchMovie} />
+        <SearchBar searchMovie={this.searchMovie.bind(this)} />
         <MovieList movies={this.state.movies} />
       </div>
     )
