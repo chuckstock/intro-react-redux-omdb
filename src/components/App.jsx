@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 const API_URL = 'http://www.omdbapi.com/?s='
 import '../stylesheets/index.css'
 
@@ -26,6 +28,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
@@ -36,4 +39,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return { movies: state.movies }
+}
+
+export default connect(mapStateToProps, actions)(App);
