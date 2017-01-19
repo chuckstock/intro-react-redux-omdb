@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
@@ -32,7 +31,7 @@ class App extends Component {
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
-        <SearchBar searchMovie={this.searchMovie} />
+        <SearchBar searchMovie={this.searchMovie.bind(this)} />
         <MovieList movies={this.state.movies} />
       </div>
     )
