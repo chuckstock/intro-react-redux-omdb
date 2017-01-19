@@ -4,3 +4,9 @@ export const setMovies = (movies) => {
     payload: movies
   }
 }
+
+export const clearMovies = () => {
+  return {
+    type: 'CLEAR_MOVIES'
+  }
+}
