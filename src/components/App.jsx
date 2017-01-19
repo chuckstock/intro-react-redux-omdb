@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
@@ -11,11 +10,7 @@ import MovieList from './MovieList';
 
 class App extends Component {
   constructor() {
-    super()
-
-    this.state = {
-      movies: []
-    }
+    super();
 
     this.searchMovie('cool');
   }
@@ -23,17 +18,16 @@ class App extends Component {
   searchMovie(term) {
     axios.get(`${API_URL}${term}`)
       .then(res => {
-        this.setState({ movies: res.data.Search });
+        this.props.setMovies(res.data.Search);
       });
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
-        <SearchBar searchMovie={this.searchMovie} />
-        <MovieList movies={this.state.movies} />
+        <SearchBar searchMovie={this.searchMovie.bind(this)} />
+        <MovieList movies={this.props.movies} />
       </div>
     )
   }
