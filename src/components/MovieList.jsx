@@ -4,11 +4,11 @@ import MovieCard from './MovieCard';
 const MovieList = (props) => {
   return (
     <div>
-      {props.movies.map(movie => (
+      {props.movies.slice(0, 10).map(movie => (
         <MovieCard
-          key={movie.imdbID}
-          title={movie.Title}
-          posterUrl={movie.Poster}
+          key={movie.id}
+          title={movie.title}
+          posterUrl={movie.poster}
           />
       ))}
     </div>

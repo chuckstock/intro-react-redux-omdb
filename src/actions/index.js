@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const fetchMovies = (term) => {
-  const request = axios.get(`http://www.omdbapi.com/?s=${term}`);
+  const request = axios.get(`http://localhost:1337/movies?s=${term}`);
 
   return {
     type: 'FETCH_MOVIES',
