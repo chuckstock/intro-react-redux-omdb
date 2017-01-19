@@ -1,0 +1,31 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+
+import '../stylesheets/index.css'
+
+import SearchBar from './SearchBar';
+import MovieList from './MovieList';
+
+class App extends Component {
+  componentWillMount() {
+    this.props.fetchMovies('cool');
+  }
+
+  render() {
+    console.log(this.props.movies);
+    return (
+      <div className="container">
+        <h1>OMDB Movie Search</h1>
+        <SearchBar searchMovie={this.props.fetchMovies.bind(this)} />
+        <MovieList movies={this.props.movies} />
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = (state) => {
+  return { movies: state.movies };
+}
+
+export default connect(mapStateToProps, actions)(App);

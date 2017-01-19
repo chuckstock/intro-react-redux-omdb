@@ -1,42 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
-const API_URL = 'https://www.omdbapi.com/?s='
-import './stylesheets/index.css'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import promise from 'redux-promise';
 
-import SearchBar from './components/SearchBar';
-import MovieList from './components/MovieList';
+import App from './components/App';
+import reducers from './reducers';
 
-class App extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      movies: []
-    }
-
-    this.searchMovie('cool');
-  }
-
-  searchMovie(term) {
-    axios.get(`${API_URL}${term}`)
-      .then(res => {
-        this.setState({ movies: res.data.Search });
-      });
-  }
-
-  render() {
-    return (
-      <div className="container">
-        <h1>OMDB Movie Search</h1>
-        <SearchBar searchMovie={this.searchMovie.bind(this)} />
-        <MovieList movies={this.state.movies} />
-      </div>
-    )
-  }
-}
+const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
-  <App />,
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
