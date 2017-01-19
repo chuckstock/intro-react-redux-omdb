@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 const API_URL = 'http://www.omdbapi.com/?s='
 import '../stylesheets/index.css'
@@ -29,7 +28,7 @@ class App extends Component {
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
-        <SearchBar searchMovie={this.searchMovie} />
+        <SearchBar searchMovie={this.searchMovie.bind(this)} />
         <MovieList movies={this.state.movies} />
       </div>
     )
