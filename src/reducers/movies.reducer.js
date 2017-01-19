@@ -1,6 +1,7 @@
 const movieReducer = (state = [], action) => {
-  if (action.type === 'SET_MOVIES') {
-    return action.payload;
+  console.log(action);
+  if (action.type === 'FETCH_MOVIES') {
+    return action.payload.data.Search;
   } else if (action.type === 'CLEAR_MOVIES') {
     return [];
   }
