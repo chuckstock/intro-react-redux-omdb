@@ -1,7 +1,11 @@
-export const setMovies = (movies) => {
+import axios from 'axios';
+
+export const fetchMovies = (term) => {
+  const request = axios.get(`http://www.omdbapi.com/?s=${term}`);
+
   return {
-    type: 'SET_MOVIES',
-    payload: movies
+    type: 'FETCH_MOVIES',
+    payload: request
   }
 }
 

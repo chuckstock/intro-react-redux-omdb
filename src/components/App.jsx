@@ -1,32 +1,22 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-const API_URL = 'http://www.omdbapi.com/?s='
 import '../stylesheets/index.css'
 
 import SearchBar from './SearchBar';
 import MovieList from './MovieList';
 
 class App extends Component {
-  constructor() {
-    super();
-
-    this.searchMovie('cool');
-  }
-
-  searchMovie(term) {
-    axios.get(`${API_URL}${term}`)
-      .then(res => {
-        this.props.setMovies(res.data.Search);
-      });
+  componentWillMount() {
+    this.props.fetchMovies('cool');
   }
 
   render() {
+    console.log(this.props.movies);
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
-        <SearchBar searchMovie={this.searchMovie.bind(this)} />
+        <SearchBar searchMovie={this.props.fetechMovies} />
         <button
           className="clear btn btn-primary"
           onClick={this.props.clearMovies}
