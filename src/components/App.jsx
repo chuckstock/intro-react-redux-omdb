@@ -17,6 +17,12 @@ class App extends Component {
       <div className="container">
         <h1>OMDB Movie Search</h1>
         <SearchBar searchMovie={this.props.fetchMovies.bind(this)} />
+        <button
+          className="btn btn-primary clear"
+          onClick={this.props.clearMovies}
+          >
+          Clear Movies
+        </button>
         <MovieList movies={this.props.movies} />
       </div>
     )

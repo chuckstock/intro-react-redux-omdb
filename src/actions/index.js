@@ -8,3 +8,9 @@ export const fetchMovies = (term) => {
     payload: request
   }
 }
+
+export const clearMovies = () => {
+  return {
+    type: 'CLEAR_MOVIES'
+  }
+}

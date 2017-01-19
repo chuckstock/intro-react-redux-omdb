@@ -1,11 +1,11 @@
 const movieReducer = (state = [], action) => {
-  console.log(action);
-  switch (action.type) {
-    case 'FETCH_MOVIES':
-      return action.payload.data.Search;
-    default:
-      return state;
+  if (action.type === 'FETCH_MOVIES') {
+    return action.payload.data.Search;
+  } else if (action.type === 'CLEAR_MOVIES') {
+    return [];
   }
+
+  return state;
 }
 
 export default movieReducer;
