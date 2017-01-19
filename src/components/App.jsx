@@ -12,7 +12,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.movies);
     return (
       <div className="container">
         <h1>OMDB Movie Search</h1>
